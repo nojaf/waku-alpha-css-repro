@@ -27,7 +27,7 @@ type useVirtualizerInput<'scrollElement> = {
   initialRect?: {
     width: int,
     height: int,
-  }
+  },
 }
 
 @module("@tanstack/react-virtual")

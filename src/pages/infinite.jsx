@@ -20,8 +20,13 @@ async function $$default(param) {
       items={initial._0}
       loadMore={loadMore}
     /> : initial._0;
-  return <div className="bg-red-500">
-    <h1>
+  return <div
+    className={"w-300 mx-auto mt-6"}
+  >
+    {import.meta.viteRsc.loadCss()}
+    <h1
+      className={"text-2xl font-bold mb-6"}
+    >
       {"Infinite Scroll"}
     </h1>
     {tmp}

@@ -13,8 +13,9 @@ let default = async () => {
       await Pokedex.getPokemonByIds(ids)
     }
 
-  <div>
-    <h1> {React.string("Infinite Scroll")} </h1>
+  <div className="w-300 mx-auto mt-6">
+    {Waku.loadCss()}
+    <h1 className="text-2xl font-bold mb-6"> {React.string("Infinite Scroll")} </h1>
     {switch initial {
     | Ok(items) => <InfiniteScroll items={items} loadMore={loadMore} />
     | Error(error) => React.string(error)
