@@ -20,7 +20,7 @@ async function $$default(param) {
       items={initial._0}
       loadMore={loadMore}
     /> : initial._0;
-  return <div>
+  return <div className="bg-red-500">
     <h1>
       {"Infinite Scroll"}
     </h1>
