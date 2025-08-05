@@ -3,10 +3,7 @@
 
 let Link = {};
 
-let CreatePages = {};
-
 export {
   Link,
-  CreatePages,
 }
 /* No side effect */
