@@ -25,7 +25,7 @@ let stripPkmn = pkmn => {
 let getPokemonByIds = async (ids: array<int>): result<array<pokemon>, string> => {
   try {
     let pkmns = await getPokemonByName(pokedex, ids)
-    if ids->Array.some(i => i > 70) {
+    if ids->Array.some(i => i > 700) {
       Error("Higher than 70")
     } else {
       Ok(pkmns->Array.map(stripPkmn))

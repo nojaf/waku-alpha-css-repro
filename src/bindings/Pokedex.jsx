@@ -17,7 +17,7 @@ function stripPkmn(pkmn) {
 async function getPokemonByIds(ids) {
   try {
     let pkmns = await pokedex.getPokemonByName(ids);
-    if (ids.some(i => i > 70)) {
+    if (ids.some(i => i > 700)) {
       return {
         TAG: "Error",
         _0: "Higher than 70"

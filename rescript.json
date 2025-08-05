@@ -1,9 +1,9 @@
 {
   "name": "raichu",
-  "sources": {
+  "sources": ["scripts", {
     "dir": "src",
     "subdirs": true
-  },
+  }],
   "package-specs": {
     "module": "esmodule",
     "in-source": true
