@@ -9,3 +9,6 @@ dist
 /lib/
 .bsb.lock
 .history
+
+# local db
+db.sqlite

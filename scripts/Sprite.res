@@ -52,15 +52,6 @@ module Sharp = {
   external toFile: (t, string) => promise<unit> = "toFile"
 }
 
-module Response = {
-  type t
-
-  @send
-  external arrayBuffer: t => promise<ArrayBuffer.t> = "arrayBuffer"
-}
-
-external fetch: string => promise<Response.t> = "fetch"
-
 module Path = {
   @module("node:path")
   external resolve: (string, string) => string = "resolve"
@@ -73,6 +64,7 @@ let thumbnailSize = 100
 let url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
 
 let downloadImage = async (url: string, index: int): Sharp.overlayOption => {
+  open Fetch
   let response = await fetch(url)
   let arrayBuffer = await response->Response.arrayBuffer
   let buffer = await arrayBuffer

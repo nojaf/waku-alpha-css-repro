@@ -9,8 +9,6 @@ let Buffer = {};
 
 let Sharp$1 = {};
 
-let Response = {};
-
 let Path = {};
 
 async function downloadImage(url, index) {
@@ -55,7 +53,6 @@ let url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/poke
 export {
   Buffer,
   Sharp$1 as Sharp,
-  Response,
   Path,
   thumbnailSize,
   url,

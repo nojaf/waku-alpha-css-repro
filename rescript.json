@@ -10,7 +10,8 @@
   },
   "suffix": ".jsx",
   "dependencies": [
-    "@rescript/react"
+    "@rescript/react",
+    "rescript-bun"
   ],
   "jsx": {
     "version": 4,
