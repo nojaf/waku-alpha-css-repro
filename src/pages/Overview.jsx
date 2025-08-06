@@ -10,7 +10,7 @@ import '../styles.css'
 
 async function getData() {
   let db = new Bunsqlite.Database("db.sqlite");
-  let statement = db.query("SELECT * FROM pokemon");
+  let statement = db.query("SELECT * FROM pokemon order by id asc");
   let pkmns = statement.all();
   db.close();
   return Stdlib_Array.filterMap(pkmns, pkmn => {

@@ -9,7 +9,7 @@ type pkmn = {
 let getData = async () => {
   open RescriptBun.BunSqlite
   let db = Database.make("db.sqlite")
-  let statement = db->Database.query("SELECT * FROM pokemon")
+  let statement = db->Database.query("SELECT * FROM pokemon order by id asc")
   let pkmns = statement->Statement.all
   db->Database.close
   pkmns->Array.filterMap(pkmn => {
